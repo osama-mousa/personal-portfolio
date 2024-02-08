@@ -1,8 +1,17 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState, useTransition } from 'react'
+import TabButton from './TabButton';
 
 const AboutSection = () => {
+    const [tab, setTab] = useState('skills');
+    const [isPending, startTransition] = useTransition();
+
+    const handleTabChange = (id) => {
+        startTransition(() => {
+            setTab(id);
+        })
+    }
     return (
         <section className='text-white'>
             <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 sm:px-16'>
@@ -17,9 +26,10 @@ const AboutSection = () => {
                         I am excited to work with others to create amazing applications.
                     </p>
                     <div className='flex flex-row mt-8 gap-3'>
-                        <span className='font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-900'>Skills</span>
-                        <span>Education</span>
-                        <span>Experience</span>
+                        <TabButton selectTab={() => handleTabChange('skills')} active={tab === "skills"}>Skills</TabButton>
+                        <TabButton selectTab={() => handleTabChange('education')} active={tab === "education"}>Education</TabButton>
+                        <TabButton selectTab={() => handleTabChange('certifications')} active={tab === "certifications"}>Certifications</TabButton>
+
                     </div>
                 </div>
             </div>
