@@ -51,7 +51,7 @@ const AboutSection = () => {
     return (
         <section className='text-white'>
             <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 sm:px-16'>
-                <Image src='/images/hand-hold-artificial-intelligence-phone-made-with-generative-al_812426-737.jpg' width={500} height={500} />
+                <Image src='/images/hand-hold-artificial-intelligence-phone-made-with-generative-al_812426-737.jpg' width={500} height={500} alt='About Image'/>
 
                 <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                     <h2 className='text-4xl text-white font-bold mb-4'>About Me</h2>
