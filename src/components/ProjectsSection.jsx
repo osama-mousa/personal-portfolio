@@ -1,5 +1,7 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import ProjectCard from './ProjectCard'
+import ProjectTag from './ProjectTag'
 
 const projectsData = [
   {
@@ -27,7 +29,7 @@ const projectsData = [
     image: "/images/projects/oniki-preview-guncel-1.jpeg",
     gitUrl: "",
     previewUrl: "",
-    tag: ["All", "Web"],
+    tag: ["All", "Test"],
   },
   {
     id: 4,
@@ -36,23 +38,46 @@ const projectsData = [
     image: "/images/projects/ivmo-preview.png",
     gitUrl: "",
     previewUrl: "",
-    tag: ["All", "Web"],
+    tag: ["All", "Test"],
   },
   {
-    id: 4,
+    id: 5,
     title: "AvFast",
     description: "Project 5 description",
     image: "/images/projects/avfast-preview.jpg",
     gitUrl: "",
     previewUrl: "",
-    tag: ["All", "Web"],
+    tag: ["All", "Test"],
   }
 ]
 const ProjectsSection = () => {
+  const [tag, setTag] = useState('All');
+
+  const handelTagChange = (newTag) => {
+    setTag(newTag);
+  }
+
+  const filteredProjects = projectsData.filter((project) =>
+    project.tag.includes(tag)
+  )
   return (
     <>
-      <h1 className='text-4xl text-white font-bold mb-4'>My Projects</h1>
-      <div>{projectsData.map((project) => <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />)}</div>
+      <h2 className='text-center text-4xl text-white font-bold mt-4 mb-8 md:mb-12'>My Projects</h2>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+        <ProjectTag onClick={handelTagChange} name='All' isSelected={tag === 'All'} />
+        <ProjectTag onClick={handelTagChange} name='Web' isSelected={tag === 'Web'} />
+        <ProjectTag onClick={handelTagChange} name='Test' isSelected={tag === 'Test'} />
+      </div>
+      <div className='grid md:grid-cols-3 gap-8'>{filteredProjects.map((project) =>
+        <ProjectCard
+          key={project.id}
+          imgUrl={project.image}
+          title={project.title}
+          description={project.description}
+          gitUrl={project.gitUrl}
+          previewUrl={project.previewUrl}
+        />)}
+      </div>
     </>
   )
 }
