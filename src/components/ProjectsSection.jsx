@@ -28,7 +28,7 @@ const projectsData = [
     description: "Project 3 description",
     image: "/images/projects/oniki-preview-guncel-1.jpeg",
     gitUrl: "",
-    previewUrl: "",
+    previewUrl: "https://oniki.net/en/",
     tag: ["All", "Test"],
   },
   {
@@ -37,7 +37,7 @@ const projectsData = [
     description: "Project 4 description",
     image: "/images/projects/ivmo-preview.png",
     gitUrl: "",
-    previewUrl: "",
+    previewUrl: "https://ivmo.com/",
     tag: ["All", "Test"],
   },
   {
@@ -46,7 +46,7 @@ const projectsData = [
     description: "Project 5 description",
     image: "/images/projects/avfast-preview.jpg",
     gitUrl: "",
-    previewUrl: "",
+    previewUrl: "https://www.avfast.com.tr/",
     tag: ["All", "Test"],
   }
 ]
