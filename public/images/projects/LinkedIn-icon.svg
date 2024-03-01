@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Artwork" viewBox="0 0 64 64">
+  <defs>
+    <style>.cls-1{fill:#003c57;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <circle class="cls-1" cx="32" cy="32" r="28"></circle>
+  <path id="Path_2520" data-name="Path 2520" class="cls-2" d="M48.5,46.47H42.08v-10c0-2.4,0-5.48-3.34-5.48s-3.85,2.61-3.85,5.31V46.47H28.47V25.8h6.16v2.83h.09a6.75,6.75,0,0,1,6.08-3.34c6.5,0,7.7,4.28,7.7,9.84ZM21.23,23A3.73,3.73,0,1,1,25,19.25,3.73,3.73,0,0,1,21.23,23h0m3.2,23.49H18V25.8h6.42Z"></path>
+</svg>
