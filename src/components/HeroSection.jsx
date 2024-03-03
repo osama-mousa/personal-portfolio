@@ -35,7 +35,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
-                    <div className='rounded-full bg-pink-900 w-[250px] h-[250px] lg:w-[330px] lg:h-[330px] relative'>
+                    <div className='rounded-full lg:rounded-none bg-purple-950  w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative glow '>
                         <Image
                             src={'/images/me.jpeg'}
                             alt='Hero Image'
