@@ -1,12 +1,52 @@
+'use client';
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import GithubIcon from '../../public/images/projects/Github-icon.svg'
 import LinkedIcon from '../../public/images/projects/LinkedIn-icon.svg'
 
 
 
 const EmailSection = () => {
+    const [emailSubmitted, setEmailSubmitted] = useState(false);
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const data = {
+            email: e.target.email.value,
+            subject: e.target.subject.value,
+            message: e.target.message.value,
+        };
+        const JSONdata = JSON.stringify(data);
+        const endpoint = "/api/send";
+
+        // Form the request for sending data to the server.
+        const options = {
+            // The method is POST because we are sending data.
+            method: "POST",
+            // Tell the server we're sending JSON.
+            headers: {
+                "Content-Type": "application/json",
+            },
+            // Body of the request is the JSON data we created above.
+            body: JSONdata,
+        };
+
+        try {
+            const response = await fetch(endpoint, options);
+            const resData = await response.json();
+
+            if (response.status === 200) {
+                console.log("Message sent.");
+                setEmailSubmitted(true);
+            }
+        } catch (error) {
+            console.error("Error occurred while parsing JSON:", error);
+        }
+    };
+
+
     return (
         <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4'>
             <div>
@@ -25,10 +65,11 @@ const EmailSection = () => {
                 </div>
             </div>
             <div>
-                <form className='flex flex-col gap-6'>
+                <form className='flex flex-col gap-6' onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="email" className='text-white mb-2 block text-sm font-medium'>Your email</label>
                         <input
+                            name='email'
                             type="email"
                             id="email"
                             required
@@ -39,6 +80,7 @@ const EmailSection = () => {
                     <div>
                         <label htmlFor="subject" className='text-white mb-2 block text-sm font-medium'>Subject</label>
                         <input
+                            name='subject'
                             type="text"
                             id="subject"
                             required
@@ -62,6 +104,13 @@ const EmailSection = () => {
                     >
                         Send Message
                     </button>
+                    {
+                        emailSubmitted && (
+                            <p className='text-green-500 text-sm mt-2'>
+                                Email sent successfully!
+                            </p>
+                        )
+                    }
                 </form>
             </div>
         </section>
