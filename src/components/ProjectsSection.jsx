@@ -7,7 +7,7 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description: "My Portfolio",
     image: "/images/projects/portfolio-preview.png",
     gitUrl: "https://github.com/osamasayd/personal-portfolio",
     previewUrl: "",
@@ -16,7 +16,7 @@ const projectsData = [
   {
     id: 2,
     title: "E-commerce",
-    description: "Project 2 description",
+    description: "Our e-commerce app, combining advanced technology with user-centric design to elevate the online shopping experience for both customers and sellers.",
     image: "/images/projects/ecommerce-preview.png",
     gitUrl: "https://github.com/osamasayd/ecommerce",
     previewUrl: "",
@@ -25,7 +25,7 @@ const projectsData = [
   {
     id: 3,
     title: "Oniki",
-    description: "Project 3 description",
+    description: "Oniki is a hybrid event platform that makes B2B matchmaking with the artificial intelligence technology it has developed.",
     image: "/images/projects/oniki-preview-guncel-1.jpeg",
     gitUrl: "",
     previewUrl: "https://oniki.net/en/",
@@ -34,7 +34,7 @@ const projectsData = [
   {
     id: 4,
     title: "İvmo",
-    description: "Project 4 description",
+    description: "International Virtual Money Operations platform",
     image: "/images/projects/ivmo-preview.png",
     gitUrl: "",
     previewUrl: "https://ivmo.com/",
@@ -43,7 +43,7 @@ const projectsData = [
   {
     id: 5,
     title: "AvFast",
-    description: "Project 5 description",
+    description: "It is an application created for lawyers' requests in order to make reliable, fast and easy authorization transactions between lawyers. With its notes board, internet map, notification and calendar features, it supports users in the most difficult transactions.",
     image: "/images/projects/avfast-preview.jpg",
     gitUrl: "",
     previewUrl: "https://www.avfast.com.tr/",
