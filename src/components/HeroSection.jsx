@@ -37,7 +37,7 @@ const HeroSection = () => {
                 <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
                     <div className='rounded-full bg-pink-900 w-[250px] h-[250px] lg:w-[330px] lg:h-[330px] relative'>
                         <Image
-                            src={'/images/simple-minimal-tech-illustration-man-editing-video-desk_605905-17689.jpg'}
+                            src={'/images/me.jpeg'}
                             alt='Hero Image'
                             className=' absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full'
                             width={300}
