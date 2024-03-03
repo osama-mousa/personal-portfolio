@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.glow {
+  box-shadow: 0 0 50px #a21dfa55;
+}
