@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React, { useState, useTransition } from 'react'
 import TabButton from './TabButton';
+import { motion } from 'framer-motion';
 
 const TAB_DATA = [
     {
@@ -50,7 +51,11 @@ const AboutSection = () => {
     }
     return (
         <section id='about' className='text-white'>
-            <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 sm:px-16'>
+            <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }} 
+                    className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 sm:px-16'>
                 <Image src='/images/hand-hold-artificial-intelligence-phone-made-with-generative-al_812426-737.jpg' width={500} height={500} alt='About Image'/>
 
                 <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
@@ -69,7 +74,7 @@ const AboutSection = () => {
                     </div>
                     <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
