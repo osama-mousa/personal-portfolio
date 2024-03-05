@@ -11,7 +11,7 @@ const projectsData = [
     description: "My Portfolio",
     image: "/images/projects/portfolio-preview.png",
     gitUrl: "https://github.com/osamasayd/personal-portfolio",
-    previewUrl: "",
+    previewUrl: "https://osamamousa.vercel.app/",
     tag: ["All", "Web"],
   },
   {
