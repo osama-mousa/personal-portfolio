@@ -40,6 +40,9 @@ const EmailSection = () => {
             if (response.status === 200) {
                 console.log("Message sent.");
                 setEmailSubmitted(true);
+                e.target.email.value = '';
+                e.target.subject.value = '';
+                e.target.message.value = '';
             }
         } catch (error) {
             console.error("Error occurred while parsing JSON:", error);
