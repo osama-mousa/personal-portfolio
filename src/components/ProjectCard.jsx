@@ -7,7 +7,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
     return (
         <div>
             <div
-                className="rounded-t-xl h-52 md:h-72 relative group"
+                className="rounded-xl h-52 md:h-72 relative group glow-20"
                 style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
             >
                 <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 rounded-t-xl">

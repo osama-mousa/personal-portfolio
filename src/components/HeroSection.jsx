@@ -44,7 +44,7 @@ const HeroSection = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     className='col-span-5 place-self-center mt-4 lg:mt-0'>
-                    <div className='rounded-full bg-purple-950  w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative glow'>
+                    <div className='rounded-full bg-purple-950  w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative glow-30 shadow-2xl'>
                         <Image
                             src={'/images/me.jpeg'}
                             alt='Hero Image'
